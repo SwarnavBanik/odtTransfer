@@ -63,7 +63,7 @@ def plot3DU(U,X,Y,Z, x0 = 0, y0 = 0, z0 = 0, figNo = 1, plot_min = [], plot_max 
     c = axs.pcolor(Y[idx,:,0]*1e6, Z[idx,0,:]*1e6, np.transpose(U[idx,:,:])*1e6/thermo.kB, cmap='Oranges', \
                     vmin = plot_min, vmax=plot_max)
     axs.grid('major')
-    fig.colorbar(c, ax = axs, label = 'U({:.0f}'.format(x0*1e6)+\
+    fig.colonaar(c, ax = axs, label = 'U({:.0f}'.format(x0*1e6)+\
                  '$\\mu$m, y,z) /k$_{\\rm B}$ ($\\mu$K)', orientation='horizontal')
     axs.axvline(y0, ls = '--', linewidth = 3, color = clrPts[1])
     axs.set_ylabel('z ($\\mu$m)')
@@ -78,7 +78,7 @@ def plot3DU(U,X,Y,Z, x0 = 0, y0 = 0, z0 = 0, figNo = 1, plot_min = [], plot_max 
                     vmin = plot_min, vmax=plot_max)
     axs.axvline(y0, ls = '--', linewidth = 3, color = clrPts[3])
     axs.grid('major')
-    fig.colorbar(c, ax = axs, label = 'U(x,y,{:.0f}'.format(z0*1e6)+\
+    fig.colonaar(c, ax = axs, label = 'U(x,y,{:.0f}'.format(z0*1e6)+\
                  '$\\mu$m) /k$_{\\rm B}$ ($\\mu$K)', orientation='horizontal')
     axs.set_ylabel('x ($\\mu$m)')
     axs.set_xlabel('y ($\\mu$m)')

@@ -1,2 +1,4 @@
 # odtTransfer
 Repo for simulating thermodynamics of cold atoms as they are transferred between Optical Dipole Traps.
+
+The codes *convgTest_rb.py* and *convgTest_na.py* test the convergence of thermodynamic properties as the effective volume is evaluated over a larger spatial grid. Once the spatial grid size for convergence is determined, thermodynamic properties can be estimated using a grid size larger than that required for convergence. The codes *adiabaticExpn_rb.py* and  *adiabaticExpn_na.py* estimate the evolution of thermodynamic properties of the atoms as they undergo adiabatic expansion in a hybrid trap comprising of a single red detuned beam and a magnetic quadrupole trap.

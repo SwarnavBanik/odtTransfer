@@ -91,7 +91,7 @@ def plotThermo(odt_0, odt_f, T,V,eta,S, figNo = 1):
                color = clrPts[0], markersize = 10)
     axs1.loglog(odt_f.T*1e6, odt_f.V*1e6,'.',  label = 'U$_{\\rm f}$', linewidth = 5,\
                color = clrPts[1], markersize = 10)
-    axs1.loglog(T*1e6, V*1e6,'--', label = 'Isentropic Process', \
+    axs1.loglog(T*1e6, V*1e6,'.', label = 'Isentropic Process', \
                 linewidth = 3, color = clrPts[3], markersize = 10)
     axs1.set_ylabel('V (cm$^3$)', fontsize = 22)
     h1, l1 = axs1.get_legend_handles_labels()
@@ -103,7 +103,7 @@ def plotThermo(odt_0, odt_f, T,V,eta,S, figNo = 1):
                  linewidth = 5, color = clrPts[0], markersize = 10)
     axs2.semilogx(odt_f.T*1e6, odt_f.S/thermo.kB,'.', label = 'U$_{\\rm f}$', \
                  linewidth = 5, color = clrPts[1], markersize = 10)
-    axs2.semilogx(T*1e6, S/thermo.kB,'--', label = 'Isentropic Process', \
+    axs2.semilogx(T*1e6, S/thermo.kB,'.', label = 'Isentropic Process', \
                   linewidth = 3, color = clrPts[3], markersize = 10)    
     axs2.set_ylabel('S/Nk$_{\\rm B}$ ($\\mu$K)', fontsize = 22)
     axs2.grid('major')
@@ -115,7 +115,7 @@ def plotThermo(odt_0, odt_f, T,V,eta,S, figNo = 1):
                  linewidth = 5, color = clrPts[0], markersize = 10)
     axs3.loglog(odt_f.T*1e6, 1/odt_f.eta,'.', label = 'U$_{\\rm f}$', \
                  linewidth = 5, color = clrPts[1], markersize = 10)
-    axs3.loglog(T*1e6, D,'--', label = 'Isentropic Process', \
+    axs3.loglog(T*1e6, D,'.', label = 'Isentropic Process', \
                   linewidth = 3, color = clrPts[3], markersize = 10)
     axs3.set_xlabel('T ($\\mu$K)', fontsize = 22)
     axs3.set_ylabel('D/N ($\\mu$K)', fontsize = 22)
