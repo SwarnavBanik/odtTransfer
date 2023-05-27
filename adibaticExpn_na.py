@@ -140,8 +140,8 @@ Bdash_f       = 10         # Final Field Gradient [G/cm]
 P0_rd         = 50e-6      # Total Power [W]
 trapFrqYZ0_rd = 20         # Trap Frequency at P0_rd [Hz]
 odtWL_rd      = 1064e-9    # Wavelength [m]
-w0_rd         = 65*1e-6    # Beam waist size [m]
-P_rd          = 0.0035     # Power [W]
+w0_rd         = 25*1e-6    # Beam waist size [m]
+P_rd          = 10         # Power [W]
 z0_rd         = -1*w0_rd   # Beam waist vertical position [m]
 
 # %% Initialize ###############################################################    
@@ -166,7 +166,7 @@ def odtPropsvsTscale_atBdash(bdash, figNo = 1, plot = False):
         raise Exception('adibaticExpn:: SvsTscale_atBdash: bdash needs to be of size 1')
     U   = U_total(bdash)
     if plot:
-        fig = plot3DU(U,X,Y,Z, z0 = z0_rd, figNo = figNo, plot_min= -20, plot_max = 150, plot_l = [])
+        fig = plot3DU(U,X,Y,Z, z0 = z0_rd, figNo = figNo, plot_min= -20, plot_max = [], plot_l = 400)
         
     odtPropScale = thermo.thermoODT( U, [x,y,z], na.m, \
              T_start = Tscale_start, T_end = Tscale_end , N_T = N_Tscale) 

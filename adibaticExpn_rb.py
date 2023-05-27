@@ -166,7 +166,7 @@ def odtPropsvsTscale_atBdash(bdash, figNo = 1, plot = False):
         raise Exception('adibaticExpn:: SvsTscale_atBdash: bdash needs to be of size 1')
     U   = U_total(bdash)
     if plot:
-        fig = plot3DU(U,X,Y,Z, z0 = z0_rd, figNo = figNo, plot_min= -20, plot_max = 150, plot_l = [])
+        fig = plot3DU(U,X,Y,Z, z0 = z0_rd, figNo = figNo, plot_min= -20, plot_max = 150, plot_l = 250)
         
     odtPropScale = thermo.thermoODT( U, [x,y,z], rb.m, \
              T_start = Tscale_start, T_end = Tscale_end , N_T = N_Tscale) 
@@ -180,7 +180,7 @@ def odtPropsvsTscale_atBdash(bdash, figNo = 1, plot = False):
 odt_0, fig1 = odtPropsvsTscale_atBdash(Bdash_0, figNo = 1, plot = True)
 odt_f, fig2 = odtPropsvsTscale_atBdash(Bdash_f, figNo = 2, plot = True)
 fig1.savefig(paths.savDir+'adiabaticExpn_U_initial.png')
-fig2.savefig(paths.savDir+'adiabaticExpn_U_firbl.png')
+fig2.savefig(paths.savDir+'adiabaticExpn_U_final.png')
 
 # %% Evaluate the initial conditions ##########################################
 T0, V0, _, _, S0 = odt_0.propsAtT0(T0)

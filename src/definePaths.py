@@ -8,5 +8,5 @@ import socket
 hostname = socket.gethostname()
 
 if hostname == 'MacBook-Pro-3.attlocal.net':
-    savDir = '/Users/swarnav/Google Drive (swarnavbanik90@gmail.com)/Work/codes/odtTransfer/results/'
-    srcDir = '/Users/swarnav/Google Drive (swarnavbanik90@gmail.com)/Work/codes/odtTransfer/src/'
+    savDir = '/Users/swarnav/Documents/Github/odtTransfer/results/'
+    srcDir = '/Users/swarnav/Documents/Github/odtTransfer/src/'
